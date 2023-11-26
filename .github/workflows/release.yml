@@ -43,7 +43,7 @@ jobs:
           path: nahui.tar.gz   # Шлях до архіву, який потрібно завантажити
 
       - name: Upload files
-      - uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: "nahui.tar.gz"
