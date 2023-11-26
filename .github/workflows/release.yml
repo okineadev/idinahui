@@ -47,3 +47,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: "nahui.tar.gz"
+          tag: ${{ github.ref }}
