@@ -1,0 +1,3 @@
+#/usr/bin/bash
+
+cat /usr/share/idinahui/text.txt | /usr/games/cowsay | /usr/games/lolcat
