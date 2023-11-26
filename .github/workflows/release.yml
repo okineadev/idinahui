@@ -31,7 +31,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Create archive
         run: tar -czvf nahui.tar.gz --exclude='readme.md' *   # Створення архіву
