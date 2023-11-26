@@ -5,7 +5,7 @@ name: Upload release
 on:
   push:
     tags:
-      - 'v*'
+      - '*'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -38,12 +38,7 @@ jobs:
           sudo apt install tar -y
           tar -czvf nahui.tar.gz --exclude='readme.md' *
 
-      - name: Release Upload
-        # You may pin to the exact commit or the version.
-        # uses: d1ceward/draft-assets-release-action@f2997b18bb04e00260f1d67c796b04a56ca6ea2e
-        uses: d1ceward/draft-assets-release-action@v2.0.0
+      - name: Upload files
+      - uses: ncipollo/release-action@v1
         with:
-      
-          token: ${{ secrets.GITHUB_TOKEN }}
-          # A list of files to publish, relative to the repository root.
-          files: nahui.tar.gz
+          artifacts: "nahui.tar.gz"
