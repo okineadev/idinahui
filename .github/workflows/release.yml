@@ -5,7 +5,7 @@ name: Upload release
 on:
   push:
     tags:
-      - '*'
+      - 'v*'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -41,4 +41,5 @@ jobs:
       - name: Upload files
       - uses: ncipollo/release-action@v1
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: "nahui.tar.gz"
