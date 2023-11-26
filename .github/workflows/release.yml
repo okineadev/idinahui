@@ -46,5 +46,5 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "nahui.tar.gz"
+          artifacts: ./nahui.tar.gz
           tag: ${{ github.ref }}
