@@ -1,0 +1,9 @@
+Source: idinahui
+Package: idinahui
+Version: 1.0
+Architecture: all
+Essential: no
+Priority: optional
+Depends: cowsay, lolcat
+Maintainer: Okinea Dev
+Description: Русский военный корабль иди НА*УЙ!

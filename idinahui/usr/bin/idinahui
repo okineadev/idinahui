@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+cat /usr/share/idinahui/text.txt | cowsay | lolcat
