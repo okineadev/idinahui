@@ -1,0 +1,19 @@
+--- /data/data/com.termux/files/usr/bin/cowsay.bak	2023-11-28 08:05:09.476901360 +0200
++++ /data/data/com.termux/files/usr/bin/cowsay	2023-11-28 08:08:02.176901294 +0200
+@@ -4,6 +4,7 @@
+ ## Cowsay
+ ##
+ 
++use Encode;
+ use Cwd 'abs_path';
+ use File::Basename;
+ use File::Find;
+@@ -244,7 +245,7 @@
+     my ($l, $m);
+     $m = -1;
+     for my $i (@_) {
+-        $l = length $i;
++        $l = length(Encode::decode_utf8($i));
+         $m = $l if ($l > $m);
+     }
+     return $m;

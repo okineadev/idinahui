@@ -1,3 +1,9 @@
-#/usr/bin/bash
+#!/usr/bin/bash
 
-cat /usr/share/idinahui/text.txt | /usr/games/cowsay | /usr/games/lolcat
+if [ -n "$PREFIX" ]; then
+    usr=$PREFIX
+else
+    usr="/usr"
+fi
+
+cat $usr/share/idinahui-assets/text.txt | cowsay -n | lolcat
